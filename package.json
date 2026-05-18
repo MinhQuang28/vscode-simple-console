@@ -1,6 +1,6 @@
 {
-  "name": "quick-log",
-  "displayName": "Quick Log",
+  "name": "simple-log-mq",
+  "displayName": "Simple Log MQ",
   "description": "Insert smart console.log with auto-detected context. Cmd+Shift+L on any variable.",
   "version": "0.1.0",
   "publisher": "haminhquang99",

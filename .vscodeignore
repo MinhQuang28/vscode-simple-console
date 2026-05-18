@@ -10,3 +10,5 @@ esbuild.js
 **/*.ts
 !dist/**/*.js
 out/**
+icon.svg
+esbuild.js
