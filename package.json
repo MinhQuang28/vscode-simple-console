@@ -3,41 +3,113 @@
   "displayName": "Quick Log",
   "description": "Insert smart console.log with auto-detected context. Cmd+Shift+L on any variable.",
   "version": "0.1.0",
-  "publisher": "minhquang",
-  "author": { "name": "Minh Quang" },
+  "publisher": "haminhquang99",
+  "author": {
+    "name": "Ha Minh Quang"
+  },
   "license": "MIT",
   "icon": "icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/minhquang/quick-log.git"
+    "url": "https://github.com/MinhQuang28/vscode-simple-console.git"
   },
-  "bugs": { "url": "https://github.com/minhquang/quick-log/issues" },
-  "homepage": "https://github.com/minhquang/quick-log#readme",
-  "keywords": ["console", "log", "console.log", "debug", "typescript", "javascript", "react", "logger"],
-  "engines": { "vscode": "^1.80.0" },
-  "categories": ["Other", "Debuggers"],
-  "galleryBanner": { "color": "#1e1e1e", "theme": "dark" },
+  "bugs": {
+    "url": "https://github.com/MinhQuang28/vscode-simple-console/issues"
+  },
+  "homepage": "https://github.com/MinhQuang28/vscode-simple-console#readme",
+  "keywords": [
+    "console",
+    "log",
+    "console.log",
+    "debug",
+    "typescript",
+    "javascript",
+    "react",
+    "logger"
+  ],
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other",
+    "Debuggers"
+  ],
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
   "main": "./dist/extension.js",
-  "activationEvents": ["onStartupFinished"],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "contributes": {
     "commands": [
-      { "command": "quickLog.insert", "title": "Quick Log: Insert" },
-      { "command": "quickLog.removeAll", "title": "Quick Log: Remove All" },
-      { "command": "quickLog.commentAll", "title": "Quick Log: Comment All" },
-      { "command": "quickLog.uncommentAll", "title": "Quick Log: Uncomment All" }
+      {
+        "command": "quickLog.insert",
+        "title": "Quick Log: Insert"
+      },
+      {
+        "command": "quickLog.removeAll",
+        "title": "Quick Log: Remove All"
+      },
+      {
+        "command": "quickLog.commentAll",
+        "title": "Quick Log: Comment All"
+      },
+      {
+        "command": "quickLog.uncommentAll",
+        "title": "Quick Log: Uncomment All"
+      }
     ],
     "keybindings": [
-      { "command": "quickLog.insert", "key": "ctrl+shift+l", "mac": "cmd+shift+l", "when": "editorTextFocus" },
-      { "command": "quickLog.removeAll", "key": "ctrl+shift+alt+l", "mac": "cmd+shift+alt+l", "when": "editorTextFocus" },
-      { "command": "quickLog.commentAll", "key": "ctrl+shift+,", "mac": "cmd+shift+,", "when": "editorTextFocus" },
-      { "command": "quickLog.uncommentAll", "key": "ctrl+shift+u", "mac": "cmd+shift+u", "when": "editorTextFocus" }
+      {
+        "command": "quickLog.insert",
+        "key": "ctrl+shift+l",
+        "mac": "cmd+shift+l",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "quickLog.removeAll",
+        "key": "ctrl+shift+alt+l",
+        "mac": "cmd+shift+alt+l",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "quickLog.commentAll",
+        "key": "ctrl+shift+,",
+        "mac": "cmd+shift+,",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "quickLog.uncommentAll",
+        "key": "ctrl+shift+u",
+        "mac": "cmd+shift+u",
+        "when": "editorTextFocus"
+      }
     ],
     "configuration": {
       "title": "Quick Log",
       "properties": {
-        "quickLog.emoji": { "type": "string", "default": "🚀", "description": "Emoji prefix in logs." },
-        "quickLog.semicolon": { "type": "boolean", "default": true, "description": "Append ; to log statement." },
-        "quickLog.quote": { "type": "string", "enum": ["double", "single", "backtick"], "default": "double", "description": "Quote style for the log label." }
+        "quickLog.emoji": {
+          "type": "string",
+          "default": "🚀",
+          "description": "Emoji prefix in logs."
+        },
+        "quickLog.semicolon": {
+          "type": "boolean",
+          "default": true,
+          "description": "Append ; to log statement."
+        },
+        "quickLog.quote": {
+          "type": "string",
+          "enum": [
+            "double",
+            "single",
+            "backtick"
+          ],
+          "default": "double",
+          "description": "Quote style for the log label."
+        }
       }
     }
   },
