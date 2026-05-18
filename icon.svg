@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <linearGradient id="flame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffd54f"/>
+      <stop offset="60%" stop-color="#ff8a3d"/>
+      <stop offset="100%" stop-color="#ff5252"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#d6d9e0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+
+  <g opacity="0.18" fill="#ffffff" font-family="ui-monospace, Menlo, monospace" font-weight="700">
+    <text x="10" y="26" font-size="14">&lt;/&gt;</text>
+    <text x="96" y="116" font-size="14">{ }</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <path d="M64 18 C 78 30, 86 50, 86 70 L 86 86 L 42 86 L 42 70 C 42 50, 50 30, 64 18 Z"
+          fill="url(#body)"/>
+    <circle cx="64" cy="54" r="9" fill="#1e88e5"/>
+    <circle cx="64" cy="54" r="5" fill="#bbdefb"/>
+    <path d="M42 72 L 28 86 L 28 96 L 42 86 Z" fill="#ef5350"/>
+    <path d="M86 72 L 100 86 L 100 96 L 86 86 Z" fill="#ef5350"/>
+    <path d="M52 86 L 76 86 L 72 100 L 56 100 Z" fill="url(#flame)"/>
+    <path d="M58 100 L 70 100 L 64 114 Z" fill="#ffd54f" opacity="0.9"/>
+  </g>
+</svg>

@@ -1,0 +1,60 @@
+{
+  "name": "quick-log",
+  "displayName": "Quick Log",
+  "description": "Insert smart console.log with auto-detected context. Cmd+Shift+L on any variable.",
+  "version": "0.1.0",
+  "publisher": "minhquang",
+  "author": { "name": "Minh Quang" },
+  "license": "MIT",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/minhquang/quick-log.git"
+  },
+  "bugs": { "url": "https://github.com/minhquang/quick-log/issues" },
+  "homepage": "https://github.com/minhquang/quick-log#readme",
+  "keywords": ["console", "log", "console.log", "debug", "typescript", "javascript", "react", "logger"],
+  "engines": { "vscode": "^1.80.0" },
+  "categories": ["Other", "Debuggers"],
+  "galleryBanner": { "color": "#1e1e1e", "theme": "dark" },
+  "main": "./dist/extension.js",
+  "activationEvents": ["onStartupFinished"],
+  "contributes": {
+    "commands": [
+      { "command": "quickLog.insert", "title": "Quick Log: Insert" },
+      { "command": "quickLog.removeAll", "title": "Quick Log: Remove All" },
+      { "command": "quickLog.commentAll", "title": "Quick Log: Comment All" },
+      { "command": "quickLog.uncommentAll", "title": "Quick Log: Uncomment All" }
+    ],
+    "keybindings": [
+      { "command": "quickLog.insert", "key": "ctrl+shift+l", "mac": "cmd+shift+l", "when": "editorTextFocus" },
+      { "command": "quickLog.removeAll", "key": "ctrl+shift+alt+l", "mac": "cmd+shift+alt+l", "when": "editorTextFocus" },
+      { "command": "quickLog.commentAll", "key": "ctrl+shift+,", "mac": "cmd+shift+,", "when": "editorTextFocus" },
+      { "command": "quickLog.uncommentAll", "key": "ctrl+shift+u", "mac": "cmd+shift+u", "when": "editorTextFocus" }
+    ],
+    "configuration": {
+      "title": "Quick Log",
+      "properties": {
+        "quickLog.emoji": { "type": "string", "default": "🚀", "description": "Emoji prefix in logs." },
+        "quickLog.semicolon": { "type": "boolean", "default": true, "description": "Append ; to log statement." },
+        "quickLog.quote": { "type": "string", "enum": ["double", "single", "backtick"], "default": "double", "description": "Quote style for the log label." }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build:prod",
+    "build": "node esbuild.js",
+    "build:prod": "node esbuild.js --production",
+    "watch": "node esbuild.js --watch",
+    "typecheck": "tsc -p ./ --noEmit",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.80.0",
+    "@vscode/vsce": "^2.24.0",
+    "esbuild": "^0.20.0",
+    "typescript": "^5.4.0"
+  }
+}
