@@ -2,7 +2,7 @@
   "name": "simple-log-mq",
   "displayName": "Simple Log MQ",
   "description": "Insert smart console.log with auto-detected context. Cmd+Shift+L on any variable.",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "publisher": "haminhquang99",
   "author": {
     "name": "Ha Minh Quang"
